@@ -8,6 +8,8 @@ module.exports = {
   //
   async up(db, client) {
     const collection = db.getCollection("nft-tokens");
+    // Populate new field w/ default value for all records
+    collection.updateMany({}, { $set: { needToRefreshMediaFiles: false }});
     // Drop existing index if present, otherwise noop
     await collection.dropIndex("sentForMediaAt_1");
     // Create new index w/ additional property. Note that any queries
@@ -31,6 +33,8 @@ module.exports = {
   //
   async down(db, client) {
     const collection = db.getCollection("nft-tokens");
+    // Unset new field for all records
+    collection.updateMany({}, { $unset: { needToRefreshMediaFiles: '' }});
     // Drop new index if present, otherwise noop
     await collection.dropIndex("sentForMediaAt_1_needToRefreshMediaFiles_1");
     // Create new index w/ additional property. Note that any queries
