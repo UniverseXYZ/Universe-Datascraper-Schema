@@ -18,5 +18,6 @@ export declare class NFTToken {
     needToRefresh: boolean;
     source: string;
 }
-export declare type NFTTokensDocument = NFTToken & Document;
-export declare const NFTTokensSchema: import("mongoose").Schema<any, import("mongoose").Model<any, any, any, any>, any, any>;
+declare type NFTTokensDocument = NFTToken & Document;
+declare const NFTTokensSchema: import("mongoose").Schema<any, import("mongoose").Model<any, any, any, any>, any, any>;
+export { NFTTokensDocument, NFTTokensSchema, };

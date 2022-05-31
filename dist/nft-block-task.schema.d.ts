@@ -6,5 +6,6 @@ export declare class NFTBlockTask {
     status: MessageStatus;
     errorMessage: string;
 }
-export declare type NFTBlockTaskDocument = NFTBlockTask & Document;
-export declare const NFTBlockTaskSchema: import("mongoose").Schema<any, import("mongoose").Model<any, any, any, any>, any, any>;
+declare type NFTBlockTaskDocument = NFTBlockTask & Document;
+declare const NFTBlockTaskSchema: import("mongoose").Schema<any, import("mongoose").Model<any, any, any, any>, any, any>;
+export { NFTBlockTaskDocument, NFTBlockTaskSchema, };

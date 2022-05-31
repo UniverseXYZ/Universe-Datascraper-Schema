@@ -14,5 +14,6 @@ export declare class NFTCollection {
     owner: string;
     vip: boolean;
 }
-export declare type NFTCollectionDocument = NFTCollection & Document;
-export declare const NFTCollectionSchema: import("mongoose").Schema<any, import("mongoose").Model<any, any, any, any>, any, any>;
+declare type NFTCollectionDocument = NFTCollection & Document;
+declare const NFTCollectionSchema: import("mongoose").Schema<any, import("mongoose").Model<any, any, any, any>, any, any>;
+export { NFTCollectionDocument, NFTCollectionSchema, };

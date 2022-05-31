@@ -14,5 +14,6 @@ export declare class NFTTransferHistory {
     category: string;
     timeLastUpdated: string;
 }
-export declare type NFTTransferHistoryDocument = NFTTransferHistory & Document;
-export declare const NFTTransferHistorySchema: import("mongoose").Schema<any, import("mongoose").Model<any, any, any, any>, any, any>;
+declare type NFTTransferHistoryDocument = NFTTransferHistory & Document;
+declare const NFTTransferHistorySchema: import("mongoose").Schema<any, import("mongoose").Model<any, any, any, any>, any, any>;
+export { NFTTransferHistoryDocument, NFTTransferHistorySchema, };

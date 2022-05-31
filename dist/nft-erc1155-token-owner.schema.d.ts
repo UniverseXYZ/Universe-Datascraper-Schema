@@ -10,5 +10,6 @@ export declare class NFTErc1155TokenOwner {
     tokenType: string;
     tokenName: string;
 }
-export declare type NFTErc1155TokenOwnerDocument = NFTErc1155TokenOwner & Document;
-export declare const NFTErc1155TokenOwnerSchema: import("mongoose").Schema<any, import("mongoose").Model<any, any, any, any>, any, any>;
+declare type NFTErc1155TokenOwnerDocument = NFTErc1155TokenOwner & Document;
+declare const NFTErc1155TokenOwnerSchema: import("mongoose").Schema<any, import("mongoose").Model<any, any, any, any>, any, any>;
+export { NFTErc1155TokenOwnerDocument, NFTErc1155TokenOwnerSchema, };

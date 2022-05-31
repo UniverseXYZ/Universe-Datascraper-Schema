@@ -10,5 +10,6 @@ export declare class NFTTokenOwnersTask {
     sentAt: Date;
     errorMessage: string;
 }
-export declare type NFTTokenOwnersTaskDocument = NFTTokenOwnersTask & Document;
-export declare const NFTTokenOwnersTaskSchema: import("mongoose").Schema<any, import("mongoose").Model<any, any, any, any>, any, any>;
+declare type NFTTokenOwnersTaskDocument = NFTTokenOwnersTask & Document;
+declare const NFTTokenOwnersTaskSchema: import("mongoose").Schema<any, import("mongoose").Model<any, any, any, any>, any, any>;
+export { NFTTokenOwnersTaskDocument, NFTTokenOwnersTaskSchema, };

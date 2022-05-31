@@ -9,33 +9,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.NFTBlockTaskSchema = exports.NFTBlockTask = void 0;
+exports.TokensPricesSchema = exports.TokensPrices = void 0;
 const mongoose_1 = require("@nestjs/mongoose");
-const types_1 = require("./types");
-let NFTBlockTask = class NFTBlockTask {
+let TokensPrices = class TokensPrices {
 };
 __decorate([
-    (0, mongoose_1.Prop)({ require: true }),
+    (0, mongoose_1.Prop)({ required: true }),
     __metadata("design:type", String)
-], NFTBlockTask.prototype, "messageId", void 0);
+], TokensPrices.prototype, "name", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ required: true }),
     __metadata("design:type", Number)
-], NFTBlockTask.prototype, "blockNum", void 0);
-__decorate([
-    (0, mongoose_1.Prop)({
-        required: true,
-    }),
-    __metadata("design:type", String)
-], NFTBlockTask.prototype, "status", void 0);
-__decorate([
-    (0, mongoose_1.Prop)({ trim: true }),
-    __metadata("design:type", String)
-], NFTBlockTask.prototype, "errorMessage", void 0);
-NFTBlockTask = __decorate([
-    (0, mongoose_1.Schema)({ timestamps: true, collection: 'nft-block-tasks' })
-], NFTBlockTask);
-exports.NFTBlockTask = NFTBlockTask;
-const NFTBlockTaskSchema = mongoose_1.SchemaFactory.createForClass(NFTBlockTask);
-exports.NFTBlockTaskSchema = NFTBlockTaskSchema;
-//# sourceMappingURL=nft-block-task.schema.js.map
+], TokensPrices.prototype, "price", void 0);
+TokensPrices = __decorate([
+    (0, mongoose_1.Schema)({ timestamps: true, collection: 'tokens-prices' })
+], TokensPrices);
+exports.TokensPrices = TokensPrices;
+exports.TokensPricesSchema = mongoose_1.SchemaFactory.createForClass(TokensPrices);
+//# sourceMappingURL=tokens-prices.schema.js.map
