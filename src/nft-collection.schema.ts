@@ -13,6 +13,9 @@ export class NFTCollection {
   @Prop()
   public createdAtBlock: number;
 
+  @Prop({ type: Object })
+  public offChainData: any;
+
   @Prop()
   public ignoreForRetrieveCreatedAtBlock: boolean;
 
@@ -51,7 +54,4 @@ const NFTCollectionSchema = SchemaFactory.createForClass(NFTCollection);
 NFTCollectionSchema.index({ contractAddress: 1 });
 // NFTCollectionSchema.index({ tokenType: 1 });
 
-export {
-  NFTCollectionDocument,
-  NFTCollectionSchema,
-}
+export { NFTCollectionDocument, NFTCollectionSchema };

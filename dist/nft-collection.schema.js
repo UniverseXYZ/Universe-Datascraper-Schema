@@ -15,17 +15,21 @@ const types_1 = require("./types");
 let NFTCollection = class NFTCollection {
 };
 __decorate([
-    (0, mongoose_1.Prop)({ required: true, trim: true, index: true, unique: true }),
+    (0, mongoose_1.Prop)({ required: true, trim: true, unique: true }),
     __metadata("design:type", String)
 ], NFTCollection.prototype, "contractAddress", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ required: true, trim: true, index: true, enum: types_1.SupportedTokenTypes }),
+    (0, mongoose_1.Prop)({ required: true, trim: true, enum: types_1.SupportedTokenTypes }),
     __metadata("design:type", String)
 ], NFTCollection.prototype, "tokenType", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", Number)
 ], NFTCollection.prototype, "createdAtBlock", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: Object }),
+    __metadata("design:type", Object)
+], NFTCollection.prototype, "offChainData", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", Boolean)
@@ -70,7 +74,7 @@ NFTCollection = __decorate([
     (0, mongoose_1.Schema)({ timestamps: true, collection: "nft-collections" })
 ], NFTCollection);
 exports.NFTCollection = NFTCollection;
-exports.NFTCollectionSchema = mongoose_1.SchemaFactory.createForClass(NFTCollection);
-exports.NFTCollectionSchema.index({ contractAddress: 1 });
-exports.NFTCollectionSchema.index({ vip: 1 }, { partialFilterExpression: { vip: { $exists: true } } });
+const NFTCollectionSchema = mongoose_1.SchemaFactory.createForClass(NFTCollection);
+exports.NFTCollectionSchema = NFTCollectionSchema;
+NFTCollectionSchema.index({ contractAddress: 1 });
 //# sourceMappingURL=nft-collection.schema.js.map
