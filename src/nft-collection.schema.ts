@@ -10,6 +10,9 @@ export class NFTCollection {
   @Prop({ required: true, trim: true, enum: SupportedTokenTypes })
   public tokenType: string;
 
+  @Prop({ default: false })
+  public public: boolean;
+
   @Prop()
   public createdAtBlock: number;
 
