@@ -66,6 +66,10 @@ __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", Boolean)
 ], NFTCollection.prototype, "vip", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", String)
+], NFTCollection.prototype, "source", void 0);
 NFTCollection = __decorate([
     (0, mongoose_1.Schema)({ timestamps: true, collection: "nft-collections" })
 ], NFTCollection);

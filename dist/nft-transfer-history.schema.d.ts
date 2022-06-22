@@ -1,11 +1,3 @@
-/// <reference types="mongoose/types/aggregate" />
-/// <reference types="mongoose/types/connection" />
-/// <reference types="mongoose/types/cursor" />
-/// <reference types="mongoose/types/document" />
-/// <reference types="mongoose/types/error" />
-/// <reference types="mongoose/types/mongooseoptions" />
-/// <reference types="mongoose/types/pipelinestage" />
-/// <reference types="mongoose/types/schemaoptions" />
 import { Document } from 'mongoose';
 export declare class NFTTransferHistory {
     contractAddress: string;
@@ -23,5 +15,5 @@ export declare class NFTTransferHistory {
     timeLastUpdated: string;
 }
 declare type NFTTransferHistoryDocument = NFTTransferHistory & Document;
-declare const NFTTransferHistorySchema: import("mongoose").Schema<NFTTransferHistory, import("mongoose").Model<NFTTransferHistory, any, any, any>, {}, {}>;
+declare const NFTTransferHistorySchema: import("mongoose").Schema<any, import("mongoose").Model<any, any, any, any>, any, any>;
 export { NFTTransferHistoryDocument, NFTTransferHistorySchema, };

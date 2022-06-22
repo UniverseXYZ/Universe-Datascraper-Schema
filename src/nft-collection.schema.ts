@@ -42,6 +42,9 @@ export class NFTCollection {
 
   @Prop()
   public vip: boolean;
+
+  @Prop()
+  public source: string;
 }
 
 type NFTCollectionDocument = NFTCollection & Document;
@@ -51,7 +54,4 @@ const NFTCollectionSchema = SchemaFactory.createForClass(NFTCollection);
 NFTCollectionSchema.index({ contractAddress: 1 });
 // NFTCollectionSchema.index({ tokenType: 1 });
 
-export {
-  NFTCollectionDocument,
-  NFTCollectionSchema,
-}
+export { NFTCollectionDocument, NFTCollectionSchema };
