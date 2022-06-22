@@ -62,7 +62,7 @@ __decorate([
     __metadata("design:type", Date)
 ], NFTToken.prototype, "sentAt", void 0);
 __decorate([
-    (0, mongoose_1.Prop)(),
+    (0, mongoose_1.Prop)({ default: null }),
     __metadata("design:type", Date)
 ], NFTToken.prototype, "sentForMediaAt", void 0);
 __decorate([
@@ -82,15 +82,15 @@ __decorate([
     __metadata("design:type", String)
 ], NFTToken.prototype, "source", void 0);
 NFTToken = __decorate([
-    (0, mongoose_1.Schema)({ timestamps: true, collection: 'nft-tokens' })
+    (0, mongoose_1.Schema)({ timestamps: true, collection: "nft-tokens" })
 ], NFTToken);
 exports.NFTToken = NFTToken;
 const NFTTokensSchema = mongoose_1.SchemaFactory.createForClass(NFTToken);
 exports.NFTTokensSchema = NFTTokensSchema;
 NFTTokensSchema.index({
     contractAddress: 1,
-    tokenId: 1
+    tokenId: 1,
 }, {
-    unique: true
+    unique: true,
 });
 //# sourceMappingURL=nft-tokens.schema.js.map

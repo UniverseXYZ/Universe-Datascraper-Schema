@@ -1,4 +1,4 @@
-import { Document } from 'mongoose';
+import { Document } from "mongoose";
 export declare class AlternativeMediaFile {
     url: string;
     type: string;
@@ -21,4 +21,4 @@ export declare class NFTToken {
 }
 declare type NFTTokensDocument = NFTToken & Document;
 declare const NFTTokensSchema: import("mongoose").Schema<any, import("mongoose").Model<any, any, any, any>, any, any>;
-export { NFTTokensDocument, NFTTokensSchema, };
+export { NFTTokensDocument, NFTTokensSchema };
