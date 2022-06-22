@@ -1,9 +1,8 @@
-import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { Document } from 'mongoose';
-import { MessageStatus, SupportedTokenTypes } from './types';
+import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
+import { Document } from "mongoose";
+import { MessageStatus, SupportedTokenTypes } from "./types";
 
-
-@Schema({ timestamps: true, collection: 'nft-collection-tasks' })
+@Schema({ timestamps: true, collection: "nft-collection-tasks" })
 export class NFTCollectionTask {
   @Prop({ require: true })
   public messageId: string;
@@ -25,14 +24,16 @@ export class NFTCollectionTask {
   })
   public status: MessageStatus;
 
-  @Prop({trim: true})
+  @Prop({ trim: true })
   public errorMessage: string;
+
+  @Prop()
+  public source: string;
 }
 
 type NFTCollectionTaskDocument = NFTCollectionTask & Document;
 
-const NFTCollectionTaskSchema =
-  SchemaFactory.createForClass(NFTCollectionTask);
+const NFTCollectionTaskSchema = SchemaFactory.createForClass(NFTCollectionTask);
 
 // NFTCollectionTaskSchema.index({ messageId: 1 });
 // NFTCollectionTaskSchema.index({ contractAddress: 1 });
@@ -41,7 +42,4 @@ const NFTCollectionTaskSchema =
 // NFTCollectionTaskSchema.index({ tokenType: 1 });
 // NFTCollectionTaskSchema.index({ status: 1 });
 
-export {
-  NFTCollectionTaskDocument,
-  NFTCollectionTaskSchema,
-}
+export { NFTCollectionTaskDocument, NFTCollectionTaskSchema };

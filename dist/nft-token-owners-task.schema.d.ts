@@ -1,11 +1,3 @@
-/// <reference types="mongoose/types/aggregate" />
-/// <reference types="mongoose/types/connection" />
-/// <reference types="mongoose/types/cursor" />
-/// <reference types="mongoose/types/document" />
-/// <reference types="mongoose/types/error" />
-/// <reference types="mongoose/types/mongooseoptions" />
-/// <reference types="mongoose/types/pipelinestage" />
-/// <reference types="mongoose/types/schemaoptions" />
 import { Document } from 'mongoose';
 import { SupportedTokenTypes } from './types';
 export declare class NFTTokenOwnersTask {
@@ -19,5 +11,5 @@ export declare class NFTTokenOwnersTask {
     errorMessage: string;
 }
 declare type NFTTokenOwnersTaskDocument = NFTTokenOwnersTask & Document;
-declare const NFTTokenOwnersTaskSchema: import("mongoose").Schema<NFTTokenOwnersTask, import("mongoose").Model<NFTTokenOwnersTask, any, any, any>, {}, {}>;
+declare const NFTTokenOwnersTaskSchema: import("mongoose").Schema<any, import("mongoose").Model<any, any, any, any>, any, any>;
 export { NFTTokenOwnersTaskDocument, NFTTokenOwnersTaskSchema, };

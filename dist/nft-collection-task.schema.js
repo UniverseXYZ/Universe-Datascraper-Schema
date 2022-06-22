@@ -44,8 +44,12 @@ __decorate([
     (0, mongoose_1.Prop)({ trim: true }),
     __metadata("design:type", String)
 ], NFTCollectionTask.prototype, "errorMessage", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", String)
+], NFTCollectionTask.prototype, "source", void 0);
 NFTCollectionTask = __decorate([
-    (0, mongoose_1.Schema)({ timestamps: true, collection: 'nft-collection-tasks' })
+    (0, mongoose_1.Schema)({ timestamps: true, collection: "nft-collection-tasks" })
 ], NFTCollectionTask);
 exports.NFTCollectionTask = NFTCollectionTask;
 const NFTCollectionTaskSchema = mongoose_1.SchemaFactory.createForClass(NFTCollectionTask);
