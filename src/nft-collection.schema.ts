@@ -45,6 +45,9 @@ export class NFTCollection {
 
   @Prop()
   public source: string;
+
+  @Prop({ default: false })
+  public attributesUpdated: boolean;
 }
 
 type NFTCollectionDocument = NFTCollection & Document;
