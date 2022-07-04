@@ -1,5 +1,6 @@
 export * from './nft-collection-task.schema';
 export * from './nft-collection.schema';
+export * from './nft-collection-attributes.schema';
 export * from './nft-tokens.schema';
 export * from './nft-token-owner.schema';
 export * from './nft-erc1155-token-owner.schema';
