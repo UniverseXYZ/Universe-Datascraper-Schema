@@ -59,15 +59,15 @@ type NFTTokensDocument = NFTToken & Document;
 
 const NFTTokensSchema = SchemaFactory.createForClass(NFTToken);
 
-// NFTTokensSchema.index(
-//   {
-//     contractAddress: 1,
-//     tokenId: 1,
-//   },
-//   {
-//     unique: true,
-//   }
-// );
+NFTTokensSchema.index(
+  {
+    contractAddress: 1,
+    tokenId: 1,
+  },
+  {
+    unique: true,
+  }
+);
 // NFTTokensSchema.index({ source: 1 });
 // NFTTokensSchema.index({ tokenType: 1 });
 
