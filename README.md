@@ -18,6 +18,7 @@ There are 2 flows that need to be done in order to update the schema:
 
 - go to your project where you want to use the new schema
 - run `npm update datascraper-schema` to download the latest version
+- The .Dockerfile will run `npm update datascraper-schema` during the build process of the image. This makes the previous step not completely necessary.
 
 ## Explanation
 The migration files will be executed in the github build action and thus apply the changes to the DB.
