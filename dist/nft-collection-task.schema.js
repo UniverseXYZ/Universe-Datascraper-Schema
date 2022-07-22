@@ -48,6 +48,10 @@ __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
 ], NFTCollectionTask.prototype, "source", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", Boolean)
+], NFTCollectionTask.prototype, "vip", void 0);
 NFTCollectionTask = __decorate([
     (0, mongoose_1.Schema)({ timestamps: true, collection: "nft-collection-tasks" })
 ], NFTCollectionTask);

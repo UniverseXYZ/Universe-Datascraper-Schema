@@ -9,6 +9,7 @@ export declare class NFTCollectionTask {
     status: MessageStatus;
     errorMessage: string;
     source: string;
+    vip: boolean;
 }
 declare type NFTCollectionTaskDocument = NFTCollectionTask & Document;
 declare const NFTCollectionTaskSchema: import("mongoose").Schema<any, import("mongoose").Model<any, any, any, any>, any, any>;

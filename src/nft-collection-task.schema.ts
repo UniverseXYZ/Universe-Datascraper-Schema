@@ -29,6 +29,9 @@ export class NFTCollectionTask {
 
   @Prop()
   public source: string;
+
+  @Prop()
+  public vip: boolean;
 }
 
 type NFTCollectionTaskDocument = NFTCollectionTask & Document;
