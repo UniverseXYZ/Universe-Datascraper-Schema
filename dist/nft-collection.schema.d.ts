@@ -15,6 +15,7 @@ export declare class NFTCollection {
     vip: boolean;
     source: string;
     attributesUpdated: boolean;
+    lastRefresh: Date;
 }
 declare type NFTCollectionDocument = NFTCollection & Document;
 declare const NFTCollectionSchema: import("mongoose").Schema<any, import("mongoose").Model<any, any, any, any>, any, any>;

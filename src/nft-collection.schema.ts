@@ -48,6 +48,9 @@ export class NFTCollection {
 
   @Prop({ default: false })
   public attributesUpdated: boolean;
+
+  @Prop() 
+  public lastRefresh: Date;
 }
 
 type NFTCollectionDocument = NFTCollection & Document;
