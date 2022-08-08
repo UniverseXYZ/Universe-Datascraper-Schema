@@ -74,6 +74,10 @@ __decorate([
     (0, mongoose_1.Prop)({ default: false }),
     __metadata("design:type", Boolean)
 ], NFTCollection.prototype, "attributesUpdated", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", Date)
+], NFTCollection.prototype, "lastRefresh", void 0);
 NFTCollection = __decorate([
     (0, mongoose_1.Schema)({ timestamps: true, collection: "nft-collections" })
 ], NFTCollection);
